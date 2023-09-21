@@ -19,6 +19,14 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 * Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 * Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
+Request:
+![ScreenshotNo1-1](images/Nomor1-1.png)
+
+Response:
+![ScreenshotNo1-2](images/Nomor1-2.png)
+User melakukan berbagai aktivitas dengan menggunakan protokol FTP.\
+Untuk soal ini saya menganalisis packet yang dikirim menggunakan protokol FTP, setelah itu mencoba beberapa sequence number yang melakukan request, dan didapatkan packet no 147. Setelah memasuki semua seq dan ack pada request, soal meminta untuk menganalisis response yakin packet 144 dan menginput seq dan ack tersebut.
+
 **Nomor 2**\
 Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!\
 Untuk soal ini, langkah pertama adalah untuk membuka terlebih dahulu file pcapng nya. Kemudian cari yang protokolnya HTTP dan di right click kemudian di follow HTTP seperti ini:\
@@ -39,13 +47,18 @@ Kemudian untuk tahu banyak paketnya tinggal dihitung berapa paket yang ada setel
 Dari kolom protokol dapat dilihat bahwa protokol layer transport yang digunakan adalah UDP.
 
 **Nomor 4**\
-Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+Berapa nilai checksum yang didapat dari header pada paket nomor 130?\
+![ScreenshotNo4](images/Nomor4.png)
+Melakukan filter menggunakan query frame.number === 130 setelah itu membuka section User Datagram Protocol dan mengambil value Checksum tersebut.
 
 **Nomor 5**\
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 * Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
 * Port berapakah pada server yang digunakan untuk service SMTP?
-* Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+* Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?\
+![ScreenshotNo5-1](images/Nomor5-1.png)
+![ScreenshotNo5-2](images/Nomor5-2.png)
+Pada salah satu packet yang menggunakan protokol smtp dilakukan follow TCP stream sehingga didapatkan password tersebut kemudian password tersebut di decode base64. Setelah itu melakukan analisis berupa jumlah packet yakni 60 kemudian port server pada packet yakni 25 dan public IP yakni yang 74.53.140.153
 
 **Nomor 7**\
 Berapa jumlah packet yang menuju IP 184.87.193.88?\
@@ -54,7 +67,9 @@ Untuk soal ini perlu menggunakan filter `ip.dst == 184.87.193.88`, sehingga pada
 Kemudian dari situ dapat langsung dihitung saja jumlah paket yang ada, dan dalam kasus ini ada sebanyak 6 paket.
 
 **Nomor 8**\
-Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)\
+Untuk memfilter protokol paket yang ada menggunakan query `tcp.dstport == 80 || udp.dsport == 80`
+![ScreenshotNo8](images/Nomor8.png)
 
 **Nomor 9**\
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!\
