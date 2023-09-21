@@ -22,9 +22,9 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 **Nomor 2**\
 Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!\
 Untuk soal ini, langkah pertama adalah untuk membuka terlebih dahulu file pcapng nya. Kemudian cari yang protokolnya HTTP dan di right click kemudian di follow HTTP seperti ini:\
-!(https://ibb.co/2ydKrFq)
+![ScreenshotNo2-1](https://ibb.co/2ydKrFq)
 Maka akan terbuka window baru yang menunjukkan hasil dari HTTP follow\
-!(https://ibb.co/st64Rq1)
+![ScreenshotNo2-2](https://ibb.co/st64Rq1)
 Dari isi kode tersebut, dapat dilihat bahwa terdapat satu baris yang tertulis `Server: gunicorn` yang juga merupakan jawaban dari pertanyaan.
 
 **Nomor 3**\
