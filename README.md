@@ -68,7 +68,7 @@ Kemudian dari situ dapat langsung dihitung saja jumlah paket yang ada, dan dalam
 
 ### Nomor 8
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)\
-Untuk memfilter protokol paket yang ada menggunakan query `tcp.dstport == 80 || udp.dsport == 80`
+Untuk memfilter protokol paket yang ada menggunakan query `tcp.dstport == 80 || udp.dsport == 80`. Query tersebut memiliki arti dstport adalah destination port.
 ![ScreenshotNo8](images/Nomor8.png)
 
 ### Nomor 9
